@@ -1,0 +1,26 @@
+[
+    {
+        "nomeProduto":"Ariel Roll Sleeve Sweatshirt",
+        "tamanho": "S",
+        "cor": "Purple",
+        "quantidade": 1
+    },
+    {
+        "nomeProduto":"Argus All-Weather Tank",
+        "tamanho": "M",
+        "cor": "Gray",
+        "quantidade": 1
+    },
+    {
+        "nomeProduto":"Apollo Running Short",
+        "tamanho": "36",
+        "cor": "Black",
+        "quantidade": 1
+    },
+    {
+        "nomeProduto":"Atlas Fitness Tank",
+        "tamanho": "XL",
+        "cor": "Blue",
+        "quantidade": 1
+    }
+]
