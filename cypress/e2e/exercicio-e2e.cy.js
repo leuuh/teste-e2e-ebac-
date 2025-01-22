@@ -20,7 +20,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
         PaginaProducts.buscarProdutos(dados[0].nomeProduto);
         PaginaProducts.addProdutoCarrinho(
-            dados[0].tamanho,
+          cy.selecionarTamanho('S'),
             dados[0].cor,
             dados[0].quantidade)
     cy.get('.woocommerce-message', { timeout: 10000 }).should('contain', dados[0].nomeProduto);
