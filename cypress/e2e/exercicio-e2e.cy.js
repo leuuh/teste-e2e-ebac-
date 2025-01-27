@@ -19,8 +19,8 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     cy.fixture('massadados').then(dados => {
 
         PaginaProducts.buscarProdutos(dados[0].nomeProduto);
-        PaginaProducts.addProdutoCarrinho(
-          cy.selecionarTamanho('S'),
+        PaginaProducts.addProdutoCarrinho( 
+            dados[0].tamanho,
             dados[0].cor,
             dados[0].quantidade)
     cy.get('.woocommerce-message', { timeout: 10000 }).should('contain', dados[0].nomeProduto);

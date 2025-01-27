@@ -5,10 +5,8 @@
 //});
 
 Cypress.Commands.add('selecionarTamanho', (tamanho) => {
-    cy.get(`.button-variable-item-${tamanho}`)
-      .click({ force: true });
-    cy.get(`.button-variable-item-${tamanho}`).should('contain', 'selected');
-  });
-  
+  cy.get(`.button-variable-item-${tamanho}`).click({ timeout: 10000 });
+});
+
   
   

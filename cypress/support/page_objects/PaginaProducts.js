@@ -10,10 +10,10 @@ class PaginaProducts {
     }
 
     addProdutoCarrinho(tamanho, cor, quantidade) {
-        cy.get('.button-variable-item-' + tamanho).click({ force:true })
-        cy.get(`.button-variable-item-${cor}`).click({ force:true })
+        cy.get(`.button-variable-item-${tamanho}`).click({timeout: 10000})
+        cy.get(`.button-variable-item-${cor}`).click({timeout: 10000});
         cy.get('.input-text').clear().type(quantidade)
-        cy.get('.single_add_to_cart_button').click({ force:true })
+        cy.get('.single_add_to_cart_button').click({timeout: 10000})
     }
     
 
