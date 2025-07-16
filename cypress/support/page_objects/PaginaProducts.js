@@ -10,13 +10,26 @@ class PaginaProducts {
     }
 
     addProdutoCarrinho(tamanho, cor, quantidade) {
-        cy.get(`.button-variable-item-${tamanho}`).click({timeout: 10000})
-        cy.get(`.button-variable-item-${cor}`).click({timeout: 10000});
-        cy.get('.input-text').clear().type(quantidade)
-        cy.get('.single_add_to_cart_button').click({timeout: 10000})
-    }
+    cy.get(`.button-variable-item-${tamanho}`, { timeout: 10000 })
+      .should('be.visible')
+      .click({ force: true })
+      .click({ force: true }) // apagar depois
+      .click({ force: true }) // apagar depois
+
+    cy.get(`.button-variable-item-${cor}`, { timeout: 10000 })
+      .should('be.visible')
+      .click({ force: true })
+
+    cy.get('.input-text')
+      .clear()
+      .type(quantidade)
+
+    cy.get('.single_add_to_cart_button', { timeout: 10000 })
+      .click({ force: true })
+  }
     
 
 }
 
 export default new PaginaProducts()
+
